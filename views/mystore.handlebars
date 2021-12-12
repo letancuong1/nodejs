@@ -1,0 +1,63 @@
+<div><a href="/courses/garbage">THÙNG RÁC</a></div>
+<div class="container">
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">destription</th>
+      <th scope="col">time create</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each courses}}
+    <tr>
+      <th scope="row">{{sum @index 1}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.destription}}</td>
+      <td>{{this.createAt}}</td>
+      <td><a style="color:black;font-weight: 700;" href="/courses/{{this._id}}/edit">sửa</a></td>
+      <td><a id="{{this._id}}" onclick="deletevideo(this.id)" style="color:black;font-weight: 700;" href="#" data-toggle="modal" data-target="#exampleModal">xóa</a></td>
+
+    </tr>
+    {{/each}}
+    
+  </tbody>
+</table>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Bạn chắc chắn xóa?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        bài hát sẽ bị xóa đi!!!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">đóng</button>
+        <button onclick="suredelete()" type="button" class="btn btn-danger">chắc chắn</button>
+        <form id="suredelete" action="" method="POST"></form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var id=null
+  function deletevideo(id1) {
+    id=id1
+  }
+  function suredelete(){
+    console.log(id)
+    document.getElementById('suredelete').action = `/courses/${id}?_methods=DELETE`
+    document.getElementById('suredelete').submit()
+
+  }
+  // document.getElementById("deletevideo").addEventListener("click", displayDate);
+  // function displayDate() {
+  //   document.getElementById("demo").innerHTML = Date();
+  // }
+</script>

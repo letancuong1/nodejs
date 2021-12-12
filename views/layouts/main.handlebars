@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Example App</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+</style>
+<body>
+    <header>
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="/">TRANG CHỦ</a>
+            </div>
+            <li style="position: absolute;right:150px;top:10px"><a href="#"><img src="https://i.pinimg.com/736x/78/90/e1/7890e13d8985d3a5360e3e62831575fd.jpg" style="width:30px;height: 30px;border-radius: 50%;"></a></li>
+            <ul class="nav navbar-nav">
+              <li style="position: absolute;right: 30px;top:20px"><a href="#" style="padding: 0px;">
+                <div class="dropdown">
+                    <a class="dropbtn" style="color:white;cursor: pointer;font-weight: 500;">LÊ TẤN CƯỜNG</a>
+                    <div class="dropdown-content">
+                    <a href="/my/store/courses">Sản phẩm của tôi</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                    </div>
+                </div>
+                </a>
+              </li>
+              <li><a href="#">Page 3</a></li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+     {{{body}}}
+     <h1>helllo</h1>
+     <footer>trang cuối</footer>
+</body>
+</html>

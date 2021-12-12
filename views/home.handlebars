@@ -1,0 +1,17 @@
+<div class="container text-center form-text">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Sản phẩm</h1>   
+        </div>
+        {{#each courses}}
+        <div class="col-sm-4">
+            <a href="courses/{{this.name}}"><img src="{{this.img}}" class="img-responsive" style="width: 100%" alt="{{this.img}}"></a>
+            <p class="text-danger">{{this.name}}</p>
+            <p class="text-info">{{this.destription}}</p>
+            <p>
+                <button type="button" class="btn btn-primary">Mua hàng</button>
+            </p>
+        </div>
+        {{/each}}
+    </div>
+</div>
